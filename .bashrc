@@ -16,9 +16,6 @@ alias gp='git pull'
 alias gpsh='git push'
 alias gss='git status -s'
 
-#PS1="\[\033[38;5;10m\]\h\[$(tput sgr0)\] \[$(tput sgr0)\]\[$(tput bold)\]\[\033[38;5;13m\]\w\[$(tput sgr0)\] \$(vcprompt) \[$(tput sgr0)\]\n\[$(tput sgr0)\]> \[$(tput sgr0)\]"
-
-
 md () { [ $# = 1 ] && mkdir -p "$@" && cd "$@" || echo "Error - no directory passed!"; }
 ls --color=al > /dev/null 2>&1 && alias ls='ls -F --color=al' || alias ls='ls -G'
 
@@ -28,8 +25,8 @@ TIME='\033[01;31m\]\t \033[01;32m\]'
 #LOCATION=' \033[01;34m\]`pwd | sed "s#\(/[^/]\{1,\}/[^/]\{1,\}/[^/]\{1,\}/\).*\(/[^/]\{1,\}/[^/]\{1,\}\)/\{0,1\}#\1_\2#g"`'
 LOCATION=' \033[38;5;13m\]\w'
 BRANCH=$(git_branch)
-BRANCH_LABEL=' \033[00;33m\]$BRANCH \[\033[00m\]\n\$ '
-PS1=$TIME$USER$HOST$LOCATION$BRANCH_LABEL
+BRANCH_LABEL=' \033[00;33m\]$BRANCH \[\033[00m\]\n'
+PS1=$TIME$USER$HOST$LOCATION$BRANCH_LABEL'$ '
 PS2='\[\033[01;36m\]>'
 
 export EDITOR=vim
