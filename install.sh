@@ -7,5 +7,4 @@ cp -f ./.bashrc ~/
 cp -f ./.bash_profile ~/
 cp -f ./.aliases ~/
 cp -f ./.bash_prompt ~/
-cp -f ./.bash_server_prompt ~/
 cp -f ./.bash_profile ~/

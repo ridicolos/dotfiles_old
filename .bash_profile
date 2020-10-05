@@ -1,5 +1,7 @@
 # Simplified dotfile for video recordings
 
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/12/bin
+
 # Load dotfiles:
 for file in ~/.{bash_prompt,aliases,private}; do
     [ -r "$file" ] && [ -f "$file" ] && source "$file";
@@ -11,6 +13,6 @@ if [ -f ~/.git-completion.bash ]; then
     source ~/.git-completion.bash
 fi
 
-# Setting PATH for Python 3.7
-# PATH="/Library/Frameworks/Python.framework/Versions/3.7/bin:${PATH}"
-# export PATH
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
