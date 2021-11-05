@@ -4,12 +4,14 @@ set guicursor=
 set number
 set relativenumber
 set noerrorbells
+set fileformat=unix
 set hidden
 set tabstop=4
 set softtabstop=4
 set nowrap
 set expandtab
 set autoindent
+set encoding=utf-8
 set shiftwidth=2
 set noswapfile
 set nobackup
@@ -17,7 +19,6 @@ set undodir=~/.vim/undodor
 set undofile
 set bg=dark
 set incsearch
-"set termguicolors
 set scrolloff=6
 set colorcolumn=80
 set signcolumn=yes
@@ -35,6 +36,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 Plug 'mbbill/undotree'
+Plug 'vim-scripts/indentpython.vim'
 call plug#end()
 
 nmap <silent> gd <Plug>(coc-definition)
@@ -57,13 +59,17 @@ endfun
  :   autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 :augroup END
 
+"split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 autocmd FileType python setlocal completeopt-=preview
 let g:ale_linter = {'python': ['flake8']}
 let g:ale_fixers = {}
 let g:ale_fixers.python = ['autopep8', 'isort']
 let g:ale_fix_on_save = 1
-" let g:ale_fixers.python = ['black', 'isort']
 
 let g:ranger_map_keys = 0
 map <C-p> :Files<CR>
