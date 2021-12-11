@@ -37,6 +37,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'dense-analysis/ale'
 Plug 'mbbill/undotree'
 Plug 'vim-scripts/indentpython.vim'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 nmap <silent> gd <Plug>(coc-definition)
