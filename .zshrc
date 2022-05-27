@@ -125,8 +125,6 @@ export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-#export PATH="/opt/homebrew/opt/postgresql@13/bin:$PATH"
-
 eval
             fuck () {
                 TF_PYTHONIOENCODING=$PYTHONIOENCODING;
