@@ -49,7 +49,6 @@ Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'gruvbox-community/gruvbox' "colorscheme
 Plug 'hashivim/vim-terraform' "terraform-syntax-highlight
 Plug 'tpope/vim-fugitive' "git wrapper
-Plug 'francoiscabrol/ranger.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
