@@ -90,7 +90,6 @@ plugins=(
   pip
   python
   terraform
-  zsh-interactive-cd
   zsh-syntax-highlighting
 )
 
@@ -107,7 +106,7 @@ export LANG=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='vim'
+  export EDITOR='nvim'
 fi
 
 # Compilation flags
