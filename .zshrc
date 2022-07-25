@@ -72,12 +72,27 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-open colored-man-pages colorize pip python brew macos zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+  brew
+  colored-man-pages
+  colorize
+  command-not-found
+  copyfile
+  copypath
+  docker
+  docker-compose
+  git
+  git-auto-fetch
+  git-open
+  gitfast
+  iterm2
+  macos
+  pip
+  python
+  terraform
+  zsh-interactive-cd
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -86,14 +101,14 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -106,6 +121,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+# alias ls='exa'
+alias maus="python ~/dev/temp/maus.py"
 
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
@@ -148,3 +165,12 @@ fuck () {
 docker-clear-log() {
   docker run -it --rm --privileged --pid=host justincormack/nsenter1 /usr/bin/truncate -s 0 $(docker inspect --format='{{.LogPath}}' $1)
 }
+
+gitlab-eon() {
+  git config --local user.name "Neise, Dennis"
+  git config --local user.email "d31762@eon.com"
+}
+
+alias vim=nvim
+
+# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
