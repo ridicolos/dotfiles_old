@@ -83,14 +83,12 @@ plugins=(
   docker-compose
   git
   git-auto-fetch
-  git-open
   gitfast
   iterm2
   macos
   pip
   python
   terraform
-  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -120,8 +118,8 @@ fi
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-# alias ls='exa'
-alias maus="python ~/dev/temp/maus.py"
+alias icat="kitty +kitten icat"
+alias vim=nvim
 
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
@@ -169,7 +167,5 @@ gitlab-eon() {
   git config --local user.name "Neise, Dennis"
   git config --local user.email "d31762@eon.com"
 }
-
-alias vim=nvim
 
 # export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

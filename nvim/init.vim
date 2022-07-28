@@ -39,6 +39,7 @@ if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
 endif
 
 call plug#begin()
+Plug 'psf/black', { 'branch': 'stable' }
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-airline/vim-airline'
 Plug 'mbbill/undotree'
@@ -75,5 +76,6 @@ endfun
 :augroup charmander
  :   autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 :augroup END
+
 
 
