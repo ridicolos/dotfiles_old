@@ -1,4 +1,5 @@
 {
+  "diagnostic.checkCurrentLine": true,
   "languageserver": {
 	"terraform": {
 	  "command": "terraform-lsp",

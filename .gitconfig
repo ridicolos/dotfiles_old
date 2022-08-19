@@ -1,6 +1,6 @@
 [user]
-	name = ridicolos
-	email = ridicolos@posteo.de
+  name = ridicolos
+  email = ridicolos@posteo.de
 
 [pager]
   diff = delta
@@ -11,14 +11,14 @@
 [interactive]
   diffFilter = delta --color-only --features=interactive
 
-[delta]
+ [delta]
   features = decorations
   line-numbers = true
 
-[delta "interactive"]
+ [delta "interactive"]
   keep-plus-minus-markers = false
 
-[delta "decorations"]
+ [delta "decorations"]
   commit-decoration-style = blue ol
   commit-style = raw
   file-style = omit
@@ -35,5 +35,7 @@
 
 [core]
   excludesFile = ~/.gitignore
+
 [alias]
 	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f"
+

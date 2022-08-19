@@ -8,7 +8,8 @@ let g:coc_global_extensions = [
       \'coc-css',
 	  \'coc-pyright',
       \'coc-git',
-      \'coc-java'
+      \'coc-java',
+      \'coc-vimtex'
       \]
 
 " Use tab for trigger completion with characters ahead and navigate.

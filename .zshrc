@@ -1,3 +1,4 @@
+#
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -114,12 +115,22 @@ fi
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 # Example aliases
+alias vim=nvim
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-alias icat="kitty +kitten icat"
-alias vim=nvim
+alias nvimconfig='vim ~/.config/nvim'
+alias kittyconfig='vim ~/.config/kitty/kitty.conf'
+# Kitty
+if TERM=xterm-kitty
+then
+  alias icat="kitty +kitten icat"
+  alias kd="kitty +kitten diff"
+  alias s="kitty +kitten ssh"
+  alias ssh=s
+fi
+
 
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
@@ -168,4 +179,8 @@ gitlab-eon() {
   git config --local user.email "d31762@eon.com"
 }
 
-# export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+alias wizard='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/are_you_a_wizard.jpg"'
+alias kai='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/kai_maus_2.png"'
+alias angry='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/angry.png"'
+alias disabled='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/disabled.jpeg"'
+alias hackerman='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/hackerman.jpg"'
