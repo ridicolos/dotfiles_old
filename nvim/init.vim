@@ -114,3 +114,6 @@ let g:vimtex_compiler_method = 'latexmk'
 " following line. The default is usually fine and is the symbol "\".
 let maplocalleader = ","
 
+" Settings for pyenv
+let g:python3_host_prog = '~/.pyenv/versions/nvim/bin/python'
+
