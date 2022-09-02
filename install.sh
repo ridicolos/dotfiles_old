@@ -6,3 +6,4 @@ ln -fs $path/.gitconfig ~/
 ln -fs $path/.gitignore ~/
 ln -fs $path/nvim ~/.config/nvim
 ln -fs $path/kitty ~/.config/kitty
+ln -fs $path/alacritty ~/.config/alacritty
