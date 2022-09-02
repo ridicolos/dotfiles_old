@@ -30,6 +30,7 @@ set colorcolumn=80
 set encoding=utf-8
 
 set shortmess+=c
+set mouse=nv
 
 " Installation Pluginmanager
 if empty(glob('~/.local/share/nvim/site/autoload/plug.vim'))
@@ -57,7 +58,8 @@ call plug#end()
 source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 
-nnoremap <leader>u :UndotreeToggle<CR>
+noremap <Leader>u :UndotreeToggle<CR>
+noremap <Leader>p "0p 
 
 colorscheme gruvbox
 let g:airline_theme='gruvbox'

@@ -44,12 +44,16 @@ else
   export EDITOR='nvim'
 fi
 
+# Pyenv
 alias brew='env PATH="${PATH//$(pyenv root)\/shims:/}" brew'
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
+# Other alias
 alias vim=nvim
 alias python=python3
+
+# Config:
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias nvimconfig='vim ~/.config/nvim'
@@ -57,10 +61,10 @@ alias kittyconfig='vim ~/.config/kitty/kitty.conf'
 # Kitty
 if TERM=xterm-kitty
 then
-  alias icat="kitty +kitten icat"
   alias kd="kitty +kitten diff"
   alias s="kitty +kitten ssh"
   alias ssh=s
+  alias icat="kitty +kitten icat"
   alias wizard='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/are_you_a_wizard.jpg"'
   alias kai='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/kai_maus_2.png"'
   alias angry='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/angry.png"'
