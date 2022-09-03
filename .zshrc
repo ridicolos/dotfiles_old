@@ -54,22 +54,29 @@ alias vim=nvim
 alias python=python3
 
 # Config:
-alias zshconfig="vim ~/.zshrc"
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias nvimconfig='vim ~/.config/nvim'
-alias kittyconfig='vim ~/.config/kitty/kitty.conf'
+alias zshcf="vim ~/.zshrc"
+alias nvimcf='vim ~/.config/nvim'
+alias kittycf='vim ~/.config/kitty/kitty.conf'
+alias alacf="nvim ~/.config/alacritty/alacritty.yml"
 # Kitty
-if TERM=xterm-kitty
+if [ -z $TERM ]
 then
-  alias kd="kitty +kitten diff"
-  alias s="kitty +kitten ssh"
-  alias ssh=s
-  alias icat="kitty +kitten icat"
-  alias wizard='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/are_you_a_wizard.jpg"'
-  alias kai='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/kai_maus_2.png"'
-  alias angry='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/angry.png"'
-  alias disabled='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/disabled.jpeg"'
-  alias hackerman='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/hackerman.jpg"'
+  if TERM=xterm-kitty
+  then
+    alias kd="kitty +kitten diff"
+    alias s="kitty +kitten ssh"
+    alias ssh=s
+    alias icat="kitty +kitten icat"
+    alias wizard='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/are_you_a_wizard.jpg"'
+    alias kai='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/kai_maus_2.png"'
+    alias angry='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/angry.png"'
+    alias disabled='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/disabled.jpeg"'
+    alias hackerman='icat "/Users/dennis/Library/Mobile Documents/com~apple~CloudDocs/Bilder/bilder für chat/hackerman.jpg"'
+  fi
+  if TERM=alacritty
+  then
+
+  fi
 fi
 
 setopt HIST_EXPIRE_DUPS_FIRST
