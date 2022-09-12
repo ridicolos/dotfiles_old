@@ -59,7 +59,7 @@ source $HOME/.config/nvim/plugins/coc.vim
 source $HOME/.config/nvim/plugins/telescope.vim
 
 noremap <Leader>u :UndotreeToggle<CR>
-noremap <Leader>p "0p 
+noremap <Leader>p "0p
 
 colorscheme gruvbox
 let g:airline_theme='gruvbox'
